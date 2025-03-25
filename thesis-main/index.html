@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Up Cycle - Waste Detection</title>
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="{{ url_for('static', filename='css/materialize.min.css') }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.4/css/all.css">
+  <!-- iOS support -->
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/icons/icon-192x192.png') }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/icons/icon-152x152.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/icons/icon-180x180.png') }}">
+  <link rel="apple-touch-icon" sizes="167x167" href="{{ url_for('static', filename='img/icons/icon-167x167.png') }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="UpCycle">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#FFE1C4">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="{{ url_for('home') }}" class="brand-logo">Up<span>Cycle</span></a>
+      <a href="#" data-target="side-menu" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('home') }}" class="waves-effect active">
+          <i class="material-icons left">home</i>Home</a></li>
+        <li><a href="{{ url_for('about') }}" class="waves-effect">
+          <i class="material-icons left">info</i>About</a></li>
+        <li><a href="{{ url_for('model_page') }}" class="waves-effect">
+          <i class="material-icons left">science</i>Our Model</a></li>
+        <li><a href="{{ url_for('contact') }}" class="waves-effect">
+          <i class="material-icons left">mail</i>Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">Up Cycle</a></li>
+    <li><a href="{{ url_for('home') }}" class="waves-effect active">
+      <i class="material-icons">home</i>Home</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('about') }}" class="waves-effect">
+      <i class="material-icons">info</i>About</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('model_page') }}" class="waves-effect">
+      <i class="material-icons">science</i>Our Model</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('contact') }}" class="waves-effect">
+      <i class="material-icons">mail</i>Contact</a>
+    </li>
+  </ul>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container center">
+      <h4>Waste Classification AI</h4>
+      <p class="flow-text">Upload an image to identify if waste is biodegradable or non-biodegradable</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <!-- Upload Section -->
+      <div class="col s12 m8 offset-m2">
+        <div class="card upload-card">
+          <div class="card-content">
+            <span class="card-title center">Image Upload</span>
+            <div class="preview-container">
+              <img id="displayImage" alt="Selected image preview" src="" style="display: none; max-width: 100%; max-height: 300px; object-fit: contain;">
+              <div id="upload-placeholder" class="center-align grey-text">
+                <i class="material-icons large">cloud_upload</i>
+                <p>Click to select an image</p>
+              </div>
+            </div>
+            <div class="center-align">
+              <input type="file" id="file-upload" accept="image/*" style="display: none;">
+              <button class="waves-effect waves-light btn-large blue" id="selectImage">
+                <i class="material-icons left">add_photo_alternate</i>
+                Select Image
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="card result-card">
+          <div class="card-content">
+            <span class="card-title center">Detection Results</span>
+            <div class="center-align">
+              <div id="result-icon" class="result-icon">
+                <i class="material-icons">pending</i>
+              </div>
+              <div class="confidence-indicator">
+                <h5 id="detected">Upload an image to start</h5>
+                <p id="confidence" class="grey-text">Confidence level will appear here</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+
+</body>
+</html>

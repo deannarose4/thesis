@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Up Cycle - Contact</title>
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="{{ url_for('static', filename='css/materialize.min.css') }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <!-- iOS support -->
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/icons/icon-192x192.png') }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/icons/icon-152x152.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/icons/icon-180x180.png') }}">
+  <link rel="apple-touch-icon" sizes="167x167" href="{{ url_for('static', filename='img/icons/icon-167x167.png') }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="UpCycle">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#FFE1C4">
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="{{ url_for('home') }}" class="brand-logo">Up<span>Cycle</span></a>
+      <a href="#" data-target="side-menu" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('home') }}" class="waves-effect active">
+          <i class="material-icons left">home</i>Home</a></li>
+        <li><a href="{{ url_for('about') }}" class="waves-effect">
+          <i class="material-icons left">info</i>About</a></li>
+        <li><a href="{{ url_for('model_page') }}" class="waves-effect">
+          <i class="material-icons left">science</i>Our Model</a></li>
+        <li><a href="{{ url_for('contact') }}" class="waves-effect">
+          <i class="material-icons left">mail</i>Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">Up Cycle</a></li>
+    <li><a href="{{ url_for('home') }}" class="waves-effect">
+      <i class="material-icons">home</i>Home</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('about') }}" class="waves-effect">
+      <i class="material-icons">info</i>About</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('model_page') }}" class="waves-effect">
+      <i class="material-icons">science</i>Our Model</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('contact') }}" class="waves-effect active">
+      <i class="material-icons">mail</i>Contact</a>
+    </li>
+  </ul>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container center">
+      <h4>Contact Us</h4>
+      <p class="flow-text">Get in touch with our team</p>
+    </div>
+  </div>
+
+  <!-- content -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card contact-info">
+          <div class="card-content">
+            <span class="card-title">Connect With Us</span>
+            <div class="contact-item">
+              <p>
+                <i class="material-icons">facebook</i>
+                <a href="https://www.facebook.com/profile.php?id=61564733796103" target="_blank">Up Cycle</a>
+              </p>
+            </div>
+            <div class="contact-item">
+              <p>
+                <i class="material-icons">email</i>
+                <span>upcycle@gmail.com</span>
+              </p>
+            </div>
+            <div class="contact-item">
+              <p>
+                <i class="material-icons">phone</i>
+                <span>--- ---- ---</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col s12 m6">
+        <div class="card contact-info">
+          <div class="card-content">
+            <span class="card-title">Visit Us</span>
+            <div class="contact-item">
+              <p>
+                <i class="material-icons">location_on</i>
+                <span>
+                  Tapinac Oval Sports Complex,<br>
+                  Donor St., East Tapinac<br>
+                  Olongapo City, Zambales PH
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+</body>
+</html>

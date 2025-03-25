@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Up Cycle - About</title>
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="{{ url_for('static', filename='css/materialize.min.css') }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <!-- iOS support -->
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/icons/icon-192x192.png') }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/icons/icon-152x152.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/icons/icon-180x180.png') }}">
+  <link rel="apple-touch-icon" sizes="167x167" href="{{ url_for('static', filename='img/icons/icon-167x167.png') }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="UpCycle">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#FFE1C4">
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="{{ url_for('home') }}" class="brand-logo">Up<span>Cycle</span></a>
+      <a href="#" data-target="side-menu" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('home') }}" class="waves-effect active">
+          <i class="material-icons left">home</i>Home</a></li>
+        <li><a href="{{ url_for('about') }}" class="waves-effect">
+          <i class="material-icons left">info</i>About</a></li>
+        <li><a href="{{ url_for('model_page') }}" class="waves-effect">
+          <i class="material-icons left">science</i>Our Model</a></li>
+        <li><a href="{{ url_for('contact') }}" class="waves-effect">
+          <i class="material-icons left">mail</i>Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">Up Cycle</a></li>
+    <li><a href="{{ url_for('home') }}" class="waves-effect">
+      <i class="material-icons">home</i>Home</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('about') }}" class="waves-effect active">
+      <i class="material-icons">info</i>About</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('model_page') }}" class="waves-effect">
+      <i class="material-icons">science</i>Our Model</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('contact') }}" class="waves-effect">
+      <i class="material-icons">mail</i>Contact</a>
+    </li>
+  </ul>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container center">
+      <h4>About Up Cycle</h4>
+      <p class="flow-text">Revolutionizing waste management through AI</p>
+    </div>
+  </div>
+
+  <!-- content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">About Us</span>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UpCycle is a application designed to promote sustainable waste management by leveraging machine learning technology. The app allows users to simply scan or upload an image of a waste item, and it intelligently classifies it as biodegradable or non-biodegradable. UpCycle aims to make waste segregation easy, accurate, and accessible for everyone—encouraging responsible disposal habits and contributing to a cleaner environment. With user-friendly features, UpCycle is your smart companion toward a more sustainable future.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Our Mission</span>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To empower individuals and communities with smart, eco-friendly technology that simplifies waste segregation using machine learning — promoting sustainable habits and reducing environmental impact, one item at a time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">What We Do</span>
+            <p>Using advanced technology and intuitive design, UpCycle makes waste sorting effortless.</p>
+            <ul class="feature-list">
+              <li>Classify with Confidence: Upload waste images, and our classifier instantly identifies whether it's biodegradable or non-biodegradable.</li>
+              <li>Educate and Inform: Learn about proper waste disposal techniques and how you can contribute to environmental preservation.</li>
+              <li>Empower Communities: Together, we can reduce landfill waste and improve recycling efficiency.</li>
+            </ul>
+            <p class="center-align" style="margin-top: 30px;">Whether you're an individual, a business, or part of a larger organization, UpCycle is here to inspire a more sustainable lifestyle. Join us on our journey toward a cleaner planet!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="stat-card">
+          <i class="material-icons large green-text">eco</i>
+          <h5>Eco-Friendly</h5>
+          <p>Promoting sustainable waste management practices</p>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="stat-card">
+          <i class="material-icons large blue-text">psychology</i>
+          <h5>AI-Powered</h5>
+          <p>Advanced machine learning for accurate classification</p>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="stat-card">
+          <i class="material-icons large purple-text">groups</i>
+          <h5>Community-Driven</h5>
+          <p>Building a network of environmentally conscious individuals</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+</body>
+</html>

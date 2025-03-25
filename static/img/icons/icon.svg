@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="256" cy="256" r="256" fill="#FFFFFF"/>
+    
+    <!-- Recycling Arrows -->
+    <g transform="translate(76, 76) scale(0.7)">
+        <!-- First Arrow -->
+        <path d="M256 64L384 160L356 200L276 144V368H236V144L156 200L128 160L256 64Z" 
+              fill="#4CAF50">
+            <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+        </path>
+        
+        <!-- Second Arrow -->
+        <path d="M448 256L352 384L312 356L368 276H144V236H368L312 156L352 128L448 256Z" 
+              fill="#2196F3">
+            <animate attributeName="opacity" values="1;0.8;1" dur="2s" repeatCount="indefinite"/>
+        </path>
+        
+        <!-- Third Arrow -->
+        <path d="M256 448L128 352L156 312L236 368V144H276V368L356 312L384 352L256 448Z" 
+              fill="#4CAF50">
+            <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite" begin="1s"/>
+        </path>
+    </g>
+    
+    <!-- Center Circle -->
+    <circle cx="256" cy="256" r="48" fill="#2196F3">
+        <animate attributeName="r" values="48;52;48" dur="2s" repeatCount="indefinite"/>
+    </circle>
+</svg> 

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Up Cycle - Model</title>
+  <!-- materialize icons, css & js -->
+  <link type="text/css" href="{{ url_for('static', filename='css/materialize.min.css') }}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <!-- iOS support -->
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/icons/icon-192x192.png') }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/icons/icon-152x152.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/icons/icon-180x180.png') }}">
+  <link rel="apple-touch-icon" sizes="167x167" href="{{ url_for('static', filename='img/icons/icon-167x167.png') }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="UpCycle">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#FFE1C4">
+</head>
+<body class="grey lighten-4">
+
+  <!-- top nav -->
+  <nav class="z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="{{ url_for('home') }}" class="brand-logo">Up<span>Cycle</span></a>
+      <a href="#" data-target="side-menu" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('home') }}" class="waves-effect active">
+          <i class="material-icons left">home</i>Home</a></li>
+        <li><a href="{{ url_for('about') }}" class="waves-effect">
+          <i class="material-icons left">info</i>About</a></li>
+        <li><a href="{{ url_for('model_page') }}" class="waves-effect">
+          <i class="material-icons left">science</i>Our Model</a></li>
+        <li><a href="{{ url_for('contact') }}" class="waves-effect">
+          <i class="material-icons left">mail</i>Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+    <li><a class="subheader">Up Cycle</a></li>
+    <li><a href="{{ url_for('home') }}" class="waves-effect">
+      <i class="material-icons">home</i>Home</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('about') }}" class="waves-effect">
+      <i class="material-icons">info</i>About</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('model_page') }}" class="waves-effect active">
+      <i class="material-icons">science</i>Our Model</a>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a href="{{ url_for('contact') }}" class="waves-effect">
+      <i class="material-icons">mail</i>Contact</a>
+    </li>
+  </ul>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container center">
+      <h4>Our AI Model</h4>
+      <p class="flow-text">Advanced machine learning for waste classification</p>
+    </div>
+  </div>
+
+  <!-- content -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Innovation in Waste Management</span>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An innovative project that leverages the power of Artificial Intelligence (AI) to revolutionize waste management. Driven by a commitment to sustainability and environmental stewardship, our AI model represents a pivotal advancement in the pursuit of a cleaner and greener future. By automating and optimizing waste classification processes, it empowers waste management stakeholders to make data-driven decisions, streamline operations, and minimize environmental impact.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As we continue to refine and enhance our AI model, we are dedicated to fostering collaborations and partnerships aimed at realizing a more sustainable and eco-friendly world. Together, let us embrace the transformative potential of AI to create a brighter and cleaner future for generations to come.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Model Architecture</span>
+            <div class="model-stats">
+              <div class="stat-card">
+                <i class="material-icons medium blue-text">memory</i>
+                <h5>TensorFlow & Keras</h5>
+                <p>Built with industry-standard frameworks</p>
+              </div>
+              <div class="stat-card">
+                <i class="material-icons medium green-text">photo_size_select_actual</i>
+                <h5>480x480 px</h5>
+                <p>Input image resolution</p>
+              </div>
+              <div class="stat-card">
+                <i class="material-icons medium orange-text">dataset</i>
+                <h5>75,000+ Images</h5>
+                <p>Training dataset size</p>
+              </div>
+            </div>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our model is implemented using TensorFlow and Keras, incorporating data augmentation techniques to enhance generalization. It processes images with a batch size of 32 and an input size of 480x480 pixels across 3 channels, ensuring consistency in training.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The model is a deep convolutional neural network (CNN) designed with multiple layers of convolution and max-pooling operations, followed by fully connected layers with dropout regularization. It is trained using an exponentially decaying learning rate with the Adam optimizer, running for 50 epochs on a Biodegradable and Non-Biodegradable waste dataset containing thousands of images. This extensive training enables our model to effectively classify waste types with high accuracy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Performance and Accuracy</span>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The proficiency of our model is clearly demonstrated by its accuracy and the assurance it provides in its forecasts. Through thorough examination and enhancement, we make certain that our model fulfills the stringent criteria necessary for practical applications in waste separation achieving over 90% of accuracy.</p>
+            
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="{{ url_for('static', filename='img/model_accuracy.png') }}" alt="Model Accuracy Graph" class="responsive-img">
+                  </div>
+                  <div class="card-content">
+                    <p class="caption grey-text text-darken-1">Model Accuracy over Training Epochs</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="{{ url_for('static', filename='img/model_loss.png') }}" alt="Model Loss Graph" class="responsive-img">
+                  </div>
+                  <div class="card-content">
+                    <p class="caption grey-text text-darken-1">Model Loss over Training Epochs</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+</body>
+</html>
